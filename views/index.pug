@@ -1,0 +1,17 @@
+html
+  head
+    title= title
+    link(href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/solar/bootstrap.min.css", rel="stylesheet", integrity="sha384-iDw+DjLp94cdk+ODAgTY4IZ6d9aaRpG9KHr168TPxrfQ9wv/DTVC+cWyojoxjHBT", crossorigin="anonymous")
+  body
+    div.container
+      h1.text-center.text-primary= title
+      each pose in poses 
+        .card.mb-2
+          h3.card-header.text-danger= pose.name
+          .card-body
+            img(src=pose.img_url, alt="yoga pose").float-right
+            h5.text-success= pose.type
+            h5.text-success= pose.anatomy
+            h5.text-success= pose.duration + ' breaths'
+            h5.text-success= pose.level
+            
